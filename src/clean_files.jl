@@ -13,7 +13,7 @@ Cleans a MACCOR file based on everything wrong I see so far
 function clean_df(df)
     df = convertTestTime(df)
     df = convertStepTime(df)
-    df = cleanGarbageColumns(df)
+    df = cleanGarbageCols(df)
 end
 
 """
