@@ -40,7 +40,7 @@ end
 
 
 """This converts the step times of the testing DF's to reasonable times"""
-function convertSteptime(df)
+function convertStepTime(df)
     stepTime = df.StepTime
     stepTimes = split.(stepTime)
     newStepTimes = Array{DateTime,1}(undef,length(stepTime))
