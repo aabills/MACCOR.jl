@@ -52,7 +52,7 @@ function convertStepTime(df)
         steptime = time[2]
         steptime = split(steptime,(':','.'))
         steptime = parse.(Int,steptime)
-        steptime = start+Day(numStepDays)+Hour(steptime[1])+Minute(steptime[2])+Second(steptime[3])+Millisecond(steptime[4]*10)
+        steptime = Day(numStepDays)+Hour(steptime[1])+Minute(steptime[2])+Second(steptime[3])+Millisecond(steptime[4]*10)
         newStepTimes[i] = steptime
     end
     df.StepTime = newStepTimes
