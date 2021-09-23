@@ -19,7 +19,7 @@ end
 """
 Converts a dataframe with raw time vector to usable date-time format
 """
-function convertTestTime(df;start=DateTime(0,1,1,0,0))
+function convertTestTime(df;start=DateTime(1,1,1,0,0))
     testTime = df.TestTime
     testTimes = split.(testTime)
     newTestTimes = Array{DateTime,1}(undef,length(testTime))
@@ -40,7 +40,7 @@ end
 
 
 """This converts the step times of the testing DF's to reasonable times"""
-function convertStepTime(df;start=DateTime(0,1,1,0,0))
+function convertStepTime(df;start=DateTime(1,1,1,0,0))
     stepTime = df.StepTime
     stepTimes = split.(stepTime)
     newStepTimes = Array{DateTime,1}(undef,length(stepTime))
